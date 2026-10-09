@@ -140,11 +140,6 @@ function Notification(title, text, type, artwork) {
             }, 350);
         }
 
-
-        // ================================
-        // АВТОМАТИЧЕСКОЕ ЗАКРЫТИЕ
-        // ================================
-
         setTimeout(() => {
 
             if (notification.isConnected) {
@@ -158,19 +153,10 @@ function Notification(title, text, type, artwork) {
 }
 
 
-// ================================
-// ОТПРАВКА ФОРМЫ
-// ================================
-
 orderForm.addEventListener("submit", (event) => {
 
-    // Запрещаем перезагрузку страницы
     event.preventDefault();
 
-
-    // ================================
-    // СОЗДАЁМ УВЕДОМЛЕНИЕ
-    // ================================
 
     const notification = new Notification(
 
@@ -183,21 +169,10 @@ orderForm.addEventListener("submit", (event) => {
         artworks.created
     );
 
-
-    // Показываем уведомление
     notification.show();
-
-
-    // ================================
-    // ПОКАЗЫВАЕМ СТАТУС ЗАКАЗА
-    // ================================
 
     orderStatus.style.display = "block";
 
-
-    // ================================
-    // ПРОКРУЧИВАЕМ К СТАТУСАМ
-    // ================================
 
     setTimeout(() => {
 
@@ -210,11 +185,6 @@ orderForm.addEventListener("submit", (event) => {
 
 });
 
-
-// ================================
-// КНОПКА:
-// ЗАКАЗ ОПЛАЧЕН
-// ================================
 
 paidButton.addEventListener("click", () => {
 
@@ -235,11 +205,6 @@ paidButton.addEventListener("click", () => {
 });
 
 
-// ================================
-// КНОПКА:
-// ЗАКАЗ ОТПРАВЛЕН
-// ================================
-
 shippedButton.addEventListener("click", () => {
 
     const notification = new Notification(
@@ -257,12 +222,6 @@ shippedButton.addEventListener("click", () => {
     notification.show();
 
 });
-
-
-// ================================
-// КНОПКА:
-// ЗАКАЗ ПОЛУЧЕН
-// ================================
 
 receivedButton.addEventListener("click", () => {
 
