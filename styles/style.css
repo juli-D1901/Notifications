@@ -1,7 +1,3 @@
-/* =========================
-   ОСНОВНЫЕ НАСТРОЙКИ
-========================= */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 * {
@@ -29,22 +25,12 @@ body {
     overflow-x: hidden;
 }
 
-
-/* =========================
-   ОСНОВНОЙ ЭКРАН
-========================= */
-
 .page {
     position: relative;
     min-height: 100vh;
     padding: 70px 8vw 100px;
     overflow: hidden;
 }
-
-
-/* =========================
-   ДЕКОРАТИВНЫЕ ФИГУРЫ
-========================= */
 
 .art-circle {
     position: absolute;
@@ -89,10 +75,6 @@ body {
 }
 
 
-/* =========================
-   БЛОК ЗАКАЗА
-========================= */
-
 .order {
     position: relative;
     z-index: 2;
@@ -114,11 +96,6 @@ body {
 
     transform: rotate(-1deg);
 }
-
-
-/* =========================
-   ЛЕВАЯ ЧАСТЬ
-========================= */
 
 .order__intro {
     display: flex;
@@ -176,11 +153,6 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================
-   ФОРМА
-========================= */
-
 .order-form {
     display: flex;
     flex-direction: column;
@@ -235,10 +207,6 @@ body {
     color: #777;
 }
 
-
-/* =========================
-   КНОПКА СОЗДАНИЯ
-========================= */
 
 .order-form__button {
     position: relative;
@@ -296,10 +264,6 @@ body {
         4px 4px 0 var(--black);
 }
 
-
-/* =========================
-   СТАТУС ЗАКАЗА
-========================= */
 
 .order-status {
     position: relative;
@@ -384,10 +348,6 @@ body {
 }
 
 
-/* =========================
-   УВЕДОМЛЕНИЕ
-========================= */
-
 .notification-container {
     position: fixed;
 
@@ -405,10 +365,6 @@ body {
     pointer-events: none;
 }
 
-
-/* =========================
-   КАРТОЧКА УВЕДОМЛЕНИЯ
-========================= */
 
 .notification {
     position: relative;
@@ -542,11 +498,6 @@ body {
     background: var(--pink);
 }
 
-
-/* =========================
-   АНИМАЦИИ
-========================= */
-
 @keyframes notificationIn {
 
     0% {
@@ -587,10 +538,6 @@ body {
     }
 }
 
-
-/* =========================
-   АДАПТИВ
-========================= */
 
 @media (max-width: 900px) {
 

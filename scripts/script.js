@@ -1,7 +1,3 @@
-// ================================
-// ЭЛЕМЕНТЫ СТРАНИЦЫ
-// ================================
-
 const orderForm = document.querySelector("#orderForm");
 
 const orderStatus = document.querySelector("#orderStatus");
@@ -13,11 +9,6 @@ const receivedButton = document.querySelector("#receivedButton");
 const notificationContainer = document.querySelector(
     "#notificationContainer"
 );
-
-
-// ================================
-// КАРТИНЫ ДЛЯ УВЕДОМЛЕНИЙ
-// ================================
 
 const artworks = {
     created: {
@@ -51,21 +42,7 @@ received: {
 }
 };
 
-
-// ================================
-// СКРЫВАЕМ СТАТУСЫ
-// ================================
-
-// До создания заказа кнопки статуса
-// не должны быть видны.
-
 orderStatus.style.display = "none";
-
-
-// ================================
-// ФУНКЦИЯ-КОНСТРУКТОР
-// УВЕДОМЛЕНИЯ
-// ================================
 
 function Notification(title, text, type, artwork) {
 
@@ -75,26 +52,14 @@ function Notification(title, text, type, artwork) {
     this.artwork = artwork;
 
 
-    // ================================
-    // МЕТОД ПОКАЗА УВЕДОМЛЕНИЯ
-    // ================================
-
     this.show = function () {
 
-        // Создаём элемент уведомления
         const notification = document.createElement("div");
 
-
-        // Добавляем основные классы
         notification.classList.add(
             "notification",
             `notification--${this.type}`
         );
-
-
-        // ================================
-        // НАЗВАНИЕ ТИПА
-        // ================================
 
         let typeText = "";
 
@@ -109,11 +74,6 @@ function Notification(title, text, type, artwork) {
         if (this.type === "error") {
             typeText = "ERROR";
         }
-
-
-        // ================================
-        // СОЗДАЁМ HTML
-        // ================================
 
         notification.innerHTML = `
             <button
@@ -152,17 +112,7 @@ function Notification(title, text, type, artwork) {
             </div>
         `;
 
-
-        // ================================
-        // ДОБАВЛЯЕМ УВЕДОМЛЕНИЕ
-        // ================================
-
         notificationContainer.append(notification);
-
-
-        // ================================
-        // КНОПКА ЗАКРЫТИЯ
-        // ================================
 
         const closeButton = notification.querySelector(
             ".notification__close"
@@ -176,20 +126,12 @@ function Notification(title, text, type, artwork) {
         });
 
 
-        // ================================
-        // ФУНКЦИЯ СКРЫТИЯ
-        // ================================
-
         function hideNotification() {
 
-            // Запускаем CSS-анимацию исчезновения
             notification.classList.add(
                 "notification--hide"
             );
 
-
-            // После окончания анимации
-            // удаляем элемент со страницы
 
             setTimeout(() => {
 
